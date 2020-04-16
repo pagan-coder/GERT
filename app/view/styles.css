@@ -1,0 +1,113 @@
+body {
+  font-family: 'sans-serif', 'Arial';
+}
+
+.navbar {
+    margin-bottom: 1em;
+}
+
+.navbar span {
+    color: white;
+}
+
+#main-title {
+    cursor: pointer;
+}
+
+#saveButton {
+    font-weight: bold;
+}
+
+#reference-link {
+    display: none;
+}
+
+.card {
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    width: 20rem;
+    max-width: 100%;
+}
+
+#reference-card {
+    display: none;
+}
+
+.arrow-nav {
+    margin-bottom: 1em;
+}
+
+#arrow-previous {
+    text-align: left;
+}
+
+#arrow-next {
+    text-align: right;
+}
+
+.node {
+  background: green;
+}
+
+.link0, .link1 {
+  stroke-opacity: .6;
+  stroke-width: 1px;
+}
+
+.link0 {
+  stroke: #999;
+}
+
+.link1 {
+  stroke: #FF2222;
+}
+
+.arrow-label {
+  font-size: 13px;
+}
+
+.duration-label {
+  font-weight: bold;
+  fill: black;
+}
+
+.probability-label {
+  fill: #FF2222;
+}
+
+.text-label {
+  font-size: 13px;
+}
+
+.text-label-probability {
+  fill: #FF2222;
+}
+
+.text-label-node-id {
+  fill: saddlebrown;
+}
+
+#label-left, #label-right {	
+	min-width: 100px;
+	min-height: 100px;
+}
+
+/* Sticky footer styles */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}

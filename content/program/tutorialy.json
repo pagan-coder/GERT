@@ -1,0 +1,52 @@
+{
+	"settings": {
+		"type": "GERT",
+		"main_header": "Práce s aplikací",
+		"label_header": "Tutoriály a ukládání",
+		"previous": "program/hrany.json",
+		"description": "Tento tutoriál objasňuje způsob práce s aplikací, tutoriály a grafy.",
+		"label_top": "K tutoriálům můžete přistupovat jak z úvodní obrazovky, tak z hlavního menu. Hlavní menu otevřete kliknutím na ikonku v levém horním rohu okna. Výsledek pak vypadá takto:<br /><br />\n\n<center>\n<img style=\"max-width: 100%;\" src=\"content/program/menu.png\" />\n</center>\n<br />\n\nNad seznamem všech dostupných tutoriálů, mezi kterými můžete libovolně přepínat, se nachází ještě dvě tlačítka, a to tlačítko „Zpět“ a tlačítko „Uložit do souboru“. Tlačítko „Zpět“ má stejný efekt jako kliknutí na nadpis aplikace, tj. na „Výuková aplikace pro metodu GERT“. Obě vás vrátí zpět na úvodní obrazovku s tutoriály a jejich krátkým popisem. Provedli-li jste nějaké změny v grafu (přidali jste uzel či hranu), budete dotázáni, jestli opravdu chcete tuto stránku opustit bez uložení.<br /><br />\n\n<strong>Tlačítko „Uložit do souboru“</strong> má stejný efekt jako stisknutí klávesy <em>S</em>. Obě možnosti vám dovolí si stáhnout soubor s definicí tutoriálu spolu se všemi změnami, které jste provedli, a to ve formátu JSON. Tento tutoriál pak můžete nalinkovat do aplikace po vzoru těch ostatních (adresář <em>content</em> a soubor <em>include.json</em> ve zdrojích aplikace).<br /><br />\n\nAbyste si mohli tutoriály sami přizpůsobit, aplikace vám dovolí měnit všechny popisné texty v tutoriálu, a to tak, že jednoduše dvakrát kliknete na příslušný text, načež se vám zobrazí dialog pro změnu textu. Sem můžete vkládat text spolu s HTML značkami, kam můžete případně vložit i JavaScriptový kód a příkazy z knihovny jQuery.",
+		"label_left": "Dvakrát klikněte SEM pro změnu textu.",
+		"label_right": "Dvakrát klikněte SEM pro změnu textu.",
+		"label_bottom": "<center>Dvakrát klikněte SEM pro změnu textu.</center>"
+	},
+	"nodes": [{
+			"id": 1,
+			"x": 227,
+			"fx": 227,
+			"y": 165,
+			"fy": 165,
+			"vx": 0,
+			"vy": 0,
+			"type": "conjunctive"
+		}, {
+			"id": 2,
+			"x": 354,
+			"fx": 354,
+			"y": 427.00001525878906,
+			"fy": 427.00001525878906,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 3,
+			"x": 568,
+			"fx": 568,
+			"y": 207,
+			"fy": 207,
+			"vx": 0,
+			"vy": 0
+		}
+	],
+	"links": [{
+			"source": 1,
+			"target": 2,
+			"duration": 3,
+			"probability": 1
+		}, {
+			"source": 1,
+			"target": 3,
+			"duration": 4,
+			"probability": 1
+		}
+	]
+}

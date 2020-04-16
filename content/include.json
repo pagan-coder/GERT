@@ -1,0 +1,8 @@
+{
+	"include": [
+		"program/program.json",
+		"cpm/cpm.json",
+		"gert-easy/gert-easy.json",
+		"gert-hard/gert-hard.json"
+	]
+}

@@ -1,0 +1,126 @@
+{
+	"settings": {
+		"type": "CPM",
+		"previous": "cpm/veliciny.json",
+		"main_header": "Metoda kritické cesty",
+		"label_header": "Složitější příklad",
+		"description": "V tomto tutoriálu se dozvíte o využití metody kritické cesty.",
+		"label_top": "<strong>Nyní si to zkuste sami!</strong><br /><br />\n<ol>\n<li>Zkuste <strong>odstranit</strong> nějaký z uzlů a uvidíte, co se stane.<br /><br /></li>\n\n<li><strong>Přidejte</strong> nový uzel.<br /><br /></li>\n\n<li><strong>Veďte hranu</strong> do nově přidaného uzlu s vámi definovanou dobou trvání dané činnosti, kterou hrana reprezentuje.<br /><br /></li>\n\n<li>Vytvořte další zcela nezávislé koncové a počáteční uzly.</li>\n</ol>",
+		"label_left": "",
+		"label_right": "",
+		"label_bottom": ""
+	},
+	"nodes": [{
+			"id": 1,
+			"fx": 70,
+			"fy": 270,
+			"x": 70,
+			"y": 270,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 2,
+			"fx": 221.00003051757812,
+			"fy": 435,
+			"x": 221.00003051757812,
+			"y": 435,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 4,
+			"x": 70,
+			"fx": 70,
+			"y": 65,
+			"fy": 65,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 5,
+			"x": 382.0000305175781,
+			"fx": 382.0000305175781,
+			"y": 269,
+			"fy": 269,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 6,
+			"x": 415.0000305175781,
+			"fx": 415.0000305175781,
+			"y": 65,
+			"fy": 65,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 7,
+			"x": 535,
+			"fx": 535,
+			"y": 484.0000305175781,
+			"fy": 484.0000305175781,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 8,
+			"x": 774,
+			"fx": 774,
+			"y": 274,
+			"fy": 274,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 9,
+			"x": 788,
+			"fx": 788,
+			"y": 484,
+			"fy": 484,
+			"vx": 0,
+			"vy": 0
+		}
+	],
+	"links": [{
+			"source": 1,
+			"target": 2,
+			"duration": 5,
+			"probability": 1
+		}, {
+			"source": 2,
+			"target": 5,
+			"duration": 3,
+			"probability": 1
+		}, {
+			"source": 5,
+			"target": 6,
+			"duration": 10,
+			"probability": 1
+		}, {
+			"source": 4,
+			"target": 6,
+			"duration": 1,
+			"probability": 1
+		}, {
+			"source": 1,
+			"target": 4,
+			"duration": 15,
+			"probability": 1
+		}, {
+			"source": 1,
+			"target": 5,
+			"duration": 3,
+			"probability": 1
+		}, {
+			"source": 7,
+			"target": 9,
+			"duration": 1,
+			"probability": 1
+		}, {
+			"source": 9,
+			"target": 8,
+			"duration": 2,
+			"probability": 1
+		}, {
+			"source": 7,
+			"target": 8,
+			"duration": 1,
+			"probability": 1
+		}
+	]
+}

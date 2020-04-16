@@ -1,0 +1,70 @@
+{
+	"settings": {
+		"type": "CPM",
+		"next": "cpm/veliciny.json",
+		"main_header": "Metoda kritické cesty",
+		"label_header": "Metoda kritické cesty",
+		"description": "V tomto tutoriálu se dozvíte o využití metody kritické cesty.",
+		"label_top": "<script>$(\"svg\").css(\"background\", \"white\");</script>Metoda kritické cesty, anglicky Critical Path Method, je metodou síťové analýzy, která využívá tzv. kritickou cestu především k odhadu délky trvání projektů podle předem stanovených dob trvání jeho jednotlivých činností, jak jsme si uvedli v tutoriálu o práci s aplikací. Posloupnost hran grafu taková, že se koncový uzel každé hrany shoduje s počátečním uzlem hrany následující, se pak nazývá <strong>cesta</strong>. Součet dob trvání všech činností, které se na dané cestě nacházejí, označujeme jako <strong>dobu trvání cesty</strong>.<br /><br />\n\n<strong>Kritická cesta</strong> je pak taková cesta, která má nejdelší dobu trvání (v následujícím grafu zobrazena červeně).<br /><br />\n\nPtáte se, proč se u uzlu číslo <em>2</em> liší hodnoty nejdříve možného začátku a nejpozději přípustného začátku následující činnosti? Na to se společně podíváme na další stránce! ",
+		"label_left": "<strong>Tip 1:</strong><br /><br />\n\nZměňte dobu trvání činnosti na hraně od uzlu <em>1</em> k uzlu <em>2</em> tak, aby doba trvání cesty na uzlech <strong>1, 2 a 4</strong> byla větší než doba trvání cesty na uzlech <strong>1, 3 a 4</strong>. <em>Čili například na 20.</em>\n",
+		"label_right": "<strong>Tip 2:</strong><br /><br />\n\nPřidejte hranu mezi uzly <em>1</em> a <em>4</em> s dobou trvání takovou, aby sama tvořila nejdelší cestu od uzlu <em>1</em> k uzlu <em>4</em>.",
+		"label_bottom": ""
+	},
+	"nodes": [{
+			"id": 1,
+			"fx": 132,
+			"fy": 235,
+			"x": 132,
+			"y": 235,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 2,
+			"fx": 357.0000305175781,
+			"fy": 368,
+			"x": 357.0000305175781,
+			"y": 368,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 3,
+			"x": 360.0000305175781,
+			"fx": 360.0000305175781,
+			"y": 111,
+			"fy": 111,
+			"vx": 0,
+			"vy": 0,
+			"type": "conjunctive"
+		}, {
+			"id": 4,
+			"x": 590,
+			"fx": 590,
+			"y": 233,
+			"fy": 233,
+			"vx": 0,
+			"vy": 0
+		}
+	],
+	"links": [{
+			"source": 1,
+			"target": 2,
+			"duration": 5,
+			"probability": 1
+		}, {
+			"source": 3,
+			"target": 4,
+			"duration": 2,
+			"probability": 1
+		}, {
+			"source": 2,
+			"target": 4,
+			"duration": 3,
+			"probability": 1
+		}, {
+			"source": 1,
+			"target": 3,
+			"duration": 10,
+			"probability": 1
+		}
+	]
+}

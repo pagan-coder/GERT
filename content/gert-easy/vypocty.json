@@ -1,0 +1,73 @@
+{
+	"settings": {
+		"type": "GERT",
+		"main_header": "Úvod do metody GERT",
+		"previous": "gert-easy/gert-easy.json",
+		"next": "gert-easy/priklad.json",
+		"label_header": "Výpočty metody GERT",
+		"description": "Tento tutoriál vás uvede do myšlenky a základních výpočtů metody GERT.",
+		"label_top": "Rozdílem ve výpočtech oproti jednodušší metodě kritické cesty (CPM) je zde <strong>zjišťování hodnoty pravděpodobnosti realizace daného uzlu</strong>, a to pro každý uzel v síťovém grafu. Tato hodnota je zvýrazněna červeně a umístěna do pravého horního rohu uzlu. Dalším rozdílem je samotný výpočet hodnot nejdříve možného začátku činnosti a nejpozději přípustného začátku činnosti (viz metoda kritické cesty), kde se nyní zohledňují pravděpodobnosti. Pro každý uzel se tedy spočítají hodnoty tří veličin, <em>T<sub>i</sub><sup>(0)</sup></em>, <em>T<sub>i</sub><sup>(1)</sup></em> a <em>P(i)</em>, podle následujících vzorců:<br /><br />\n\n<hr />\n\n<strong>Pro konjunktivní uzly:</strong><br /><br />\n\n<img src=\"content/gert-easy/connode.png\" style=\"width: 550px; max-width: 100%;\" />\n\n<br /><br />\n<strong>Pro inkluzivní uzly:</strong><br /><br />\n\n<img src=\"content/gert-easy/incnode.png\" style=\"width: 550px; max-width: 100%;\" />\n\n<br /><br />\n<strong>Pro disjunktivní uzly:</strong><br /><br />\n\n<img src=\"content/gert-easy/disnode.png\" style=\"width: 550px; max-width: 100%;\" />\n\n<br /><hr /><br />\n\nV koncovém uzlu grafu se pak nachází hodnota pravděpodobnosti realizace celého projektu podle zadaných pravděpodobností realizací jednotlivých hran/činností. Jak je možné vidět z výše uvedených vzorců, pravděpodobností jsou ovlivněny i začátky jednotlivých činností, což vede k lepšímu odhadu na dobu trvání celého projektu, než pokud by se pracovalo s čistě deterministickými hodnotami, jako je tomu v případě metody kritické cesty.",
+		"label_left": "<strong>Tip 1:</strong><br /><br />\n\nZkuste z hlavy nebo na papíře vypočítat změněné hodnoty dob začátků u jednotlivých uzlů, když upravíte například zadanou pravděpodobnost na hraně mezi uzly <em>2</em> a <em>3</em>. Výsledek si pak ověřte změněním této hodnoty zde v grafu.",
+		"label_right": "<strong>Tip 2:</strong><br /><br />\n\nPřidejte vlastní uzel s vybraným typem (konjunktivní, inkluzivní nebo disjunktivní) a veďte z/do něj hranu. Sledujte, jak se změní hodnoty jednotlivých vypočtených veličin.",
+		"label_bottom": ""
+	},
+	"nodes": [{
+			"id": 0,
+			"fx": 163,
+			"fy": 219,
+			"x": 163,
+			"y": 219,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 1,
+			"x": 416,
+			"fx": 416,
+			"y": 104,
+			"fy": 104,
+			"vx": 0,
+			"vy": 0,
+			"type": "conjunctive"
+		}, {
+			"id": 2,
+			"x": 407,
+			"fx": 407,
+			"y": 362.00001525878906,
+			"fy": 362.00001525878906,
+			"vx": 0,
+			"vy": 0,
+			"type": "inclusive"
+		}, {
+			"id": 3,
+			"x": 672,
+			"fx": 672,
+			"y": 232,
+			"fy": 232,
+			"vx": 0,
+			"vy": 0,
+			"type": "disjunctive"
+		}
+	],
+	"links": [{
+			"source": 0,
+			"target": 1,
+			"duration": 4,
+			"probability": 1
+		}, {
+			"source": 2,
+			"target": 3,
+			"duration": 4,
+			"probability": 0.7
+		}, {
+			"source": 0,
+			"target": 2,
+			"duration": 4,
+			"probability": 1
+		}, {
+			"source": 1,
+			"target": 3,
+			"duration": 8,
+			"probability": 0.8
+		}
+	]
+}

@@ -1,0 +1,96 @@
+{
+	"settings": {
+		"type": "CPM",
+		"previous": "cpm/cpm.json",
+		"next": "cpm/priklad.json",
+		"main_header": "Metoda kritické cesty",
+		"label_header": "Kritická cesta a začátky činností",
+		"description": "V tomto tutoriálu se dozvíte o využití metody kritické cesty.",
+		"label_top": "<strong>Všimněte si, že se na kritické cestě (zvýrazněná červeně) doby nejdříve možných začátků a nejpozději přípustných začátků činností v rámci daného uzlu rovnají.</strong> Je to proto, že se doba trvání kritické cesty považuje za dobu trvání celého projektu, a logicky se tedy na kritické cestě veškerý čas spotřebuje na provedení činností (například celkový čas 10 dní se rozdělí mezi 2 činnosti, kdy každá trvá 5 dní) a nezbude žádný čas na rezervu. Pokud se ovšem dostaneme mimo kritickou cestu, tento celkový čas se na této jiné cestě může rozdělit jinak (například celkový čas 10 dní se rozdělí mezi 2 činnosti, kdy každá trvá 4 dny + zbydou 2 dny jako rezerva).<br /><br />\n\n<strong>Jak se ale tyto rezervy počítají?</strong> Abychom to zjistili, musíme si napřed uvědomit, jak se počítají jednotlivé doby začátků.<br /><br />\n\nNejdříve možný začátek činnosti <em>T<sub>i</sub><sup>(0)</sup></em> se spočítá při jednoduchém průchodu grafem od počátečního bodu ke koncovému. Pro každou vstupující hranu do daného uzlu se spočítá doba tak, že se k z jejího počátečního uzlu zjištěné hodnotě <em>T<sub>j</sub><sup>(0)</sup></em> přičte doba trvání dané činnosti <em>t<sub>ji</sub></em> mezi uzly <em>j</em> a <em>i</em>. Z těchto hodnot se pak zvolí ta největší z nich, která odpovídá nejdříve možnému začátku činnosti <em>T<sub>i</sub><sup>(0)</sup></em>.<br /><br />\n\nPři zpětném průchodu od koncového bodu síťového grafu k počátečnímu lze ke každé činnosti zjistit její nejpozději přípustný začátek <em>T<sub>i</sub><sup>(1)</sup></em> (u koncového uzlu grafu se rovná nejdříve možnému začátku). Pro každou vystupující hranu se doba spočítá jako rozdíl následujícího nejpozději přípustného začátku <em>T<sub>k</sub><sup>(1)</sup></em> a doby trvání následující činnosti <em>t<sub>ik</sub></em> mezi uzly <em>i</em> a <em>k</em>. Z těchto hodnot se pak vybere ta nejmenší, která odpovídá zjištěnému nejpozději přípustnému začátku.<br /><br />\n\nRozdílem nejpozději přípustného začátku a nejdříve možného začátku vznikne u daného uzlu <em>rezerva</em>.",
+		"label_left": "<strong>Tip:</strong><br /><br />\n\nZměňte dobu trvání činnosti na hraně mezi uzly <em>2</em> a <em>5</em>, například z <strong>3</strong> na <strong>4</strong>, a pozorujte, jak se změní nejdříve možný začátek u uzlu <em>5</em> (průchod směrem ke koncovému uzlu grafu) a nejpozději přípustný začátek u uzlu <em>4</em> (zpětný průchod směrem k počátečnímu uzlu grafu). \n",
+		"label_right": "<strong>Vytvořte si příklad pro vlastní výpočet:</strong><br /><br />\n\nNa zvolených místech v grafu měňte u hran doby trvání daných činností po tom, co si předem sami vypočtete rezervy u jednotlivých uzlů.",
+		"label_bottom": ""
+	},
+	"nodes": [{
+			"id": 1,
+			"fx": 125,
+			"fy": 252,
+			"x": 125,
+			"y": 252,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 2,
+			"fx": 295.0000305175781,
+			"fy": 368,
+			"x": 295.0000305175781,
+			"y": 368,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 3,
+			"x": 294.0000305175781,
+			"fx": 294.0000305175781,
+			"y": 108,
+			"fy": 108,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 4,
+			"x": 555,
+			"fx": 555,
+			"y": 110,
+			"fy": 110,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 5,
+			"x": 537.0000305175781,
+			"fx": 537.0000305175781,
+			"y": 370,
+			"fy": 370,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 6,
+			"x": 745,
+			"fx": 745,
+			"y": 242,
+			"fy": 242,
+			"vx": 0,
+			"vy": 0
+		}
+	],
+	"links": [{
+			"source": 1,
+			"target": 2,
+			"duration": 5,
+			"probability": 1
+		}, {
+			"source": 3,
+			"target": 4,
+			"duration": 2,
+			"probability": 1
+		}, {
+			"source": 1,
+			"target": 3,
+			"duration": 10,
+			"probability": 1
+		}, {
+			"source": 2,
+			"target": 5,
+			"duration": 3,
+			"probability": 1
+		}, {
+			"source": 5,
+			"target": 6,
+			"duration": 1,
+			"probability": 1
+		}, {
+			"source": 4,
+			"target": 6,
+			"duration": 1,
+			"probability": 1
+		}
+	]
+}

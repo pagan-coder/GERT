@@ -1,0 +1,94 @@
+{
+	"settings": {
+		"type": "GERT",
+		"main_header": "Úvod do metody GERT",
+		"next": "gert-easy/vypocty.json",
+		"label_header": "Úvod do metody GERT",
+		"description": "Tento tutoriál vás uvede do myšlenky a základních výpočtů metody GERT.",
+		"label_top": "<script>$(\"svg\").css(\"background\", \"white\");</script>Metoda GERT (anglicky Graphical Evaluation and Review Technique) se v mnohém podobá již zmíněné metodě kritické cesty. Důležitým rozdílem mezi oběma těmito metodami, určenými především pro odhad doby trvání projektu, je uvedení <strong>pravděpodobnosti</strong> do celé problematiky. Prakticky to znamená, že se ke každé činnosti projektu kromě její doby trvání zadá i pravděpodobnost, že se daná činnost skutečně realizuje. To je základ, ze kterého vyplývají následující důsledky:<br /><br />\n\nV případě, že mají hrany vystupující z daného uzlu zadanou pravděpodobnost realizace (tj. jinou než 1, jinou než že tedy určitě nastanou), potom mluvíme o takzvaném <strong>stochastickém uzlu</strong>. V případě, že pravděpodobnosti realizace u vystupujících hran z daného uzlu zadány nejsou, mluvíme o <strong>deterministickém uzlu.</strong><br /><br />\nS pravděpodobností realizace se však nepracuje pouze při výstupu, ale i při vstupu hran do jednotlivých uzlů. Zde rozlišujeme tři základní typy uzlů:<br /><br />\n<ul>\n<li>\n<strong>konjunktivní uzel</strong>, který se realizuje (provede) v případě, že se realizují všechny do něj vstupující hrany<br /><br />\n</li>\n<li>\n<strong>inkluzivní uzel</strong>, který se realizuje v případě, že se realizuje alespoň jedna vstupující hrana<br /><br />\n</li>\n<li>\n<strong>disjunktivní uzel</strong>, který se realizuje v případě, kdy se realizuje právě jedna vstupující hrana<br />\n</li>\n</ul>\nNásledující graf ukazuje všechny tyto typy uzlů, a to jak <strong>v závislosti na výstupních hranách</strong> (stochastický, deterministický uzel), tak i v závislosti na tom, jak daný <strong>uzel „reaguje“ na vstupní hrany</strong> (konjunktivní, inkluzivní a disjunktivní uzel).\n",
+		"label_left": "<strong>Poznejte typ uzlu!</strong><br /><br />\n\nDvakrát klikněte na příslušný uzel, změňte jeho typ (vyberte z nabídky) a sledujte, jak se promění jeho vzhled.<br /><br /><em>Můžete rovněž pozorovat změnu jeho vypočítané pravděpodobnosti, která je zvýrazněna červeně v jeho pravém horním rohu.</em>",
+		"label_right": "<strong>Tip 1:</strong><br /><br />\nPřidejte například hranu mezi uzly <em>2</em> a <em>4</em> a sledujte změnu ve vypočítaných hodnotách (například ve vypočítaných dobách začátků).<br /><br />\n<strong>Tip 2:</strong><br /><br />\nZměňte pravděpodobnosti u jednotlivých hran, abyste ovlivnili, jestli jejich koncové uzly budou deterministické či stochastické.",
+		"label_bottom": ""
+	},
+	"nodes": [{
+			"id": 0,
+			"fx": 143,
+			"fy": 223,
+			"x": 143,
+			"y": 223,
+			"vy": 0,
+			"vx": 0
+		}, {
+			"id": 1,
+			"x": 382,
+			"fx": 382,
+			"y": 150,
+			"fy": 150,
+			"vx": 0,
+			"vy": 0
+		}, {
+			"id": 2,
+			"x": 653,
+			"fx": 653,
+			"y": 150,
+			"fy": 150,
+			"vx": 0,
+			"vy": 0,
+			"type": "inclusive"
+		}, {
+			"id": 3,
+			"x": 780,
+			"fx": 780,
+			"y": 323,
+			"fy": 323,
+			"vx": 0,
+			"vy": 0,
+			"type": "inclusive"
+		}, {
+			"id": 4,
+			"x": 533,
+			"fx": 533,
+			"y": 398,
+			"fy": 398,
+			"vx": 0,
+			"vy": 0,
+			"type": "disjunctive"
+		}, {
+			"id": 5,
+			"x": 235,
+			"fx": 235,
+			"y": 419,
+			"fy": 419,
+			"vx": 0,
+			"vy": 0,
+			"type": "disjunctive"
+		}
+	],
+	"links": [{
+			"source": 0,
+			"target": 1,
+			"duration": 3,
+			"probability": 0.5
+		}, {
+			"source": 1,
+			"target": 2,
+			"duration": 5,
+			"probability": 1
+		}, {
+			"source": 2,
+			"target": 3,
+			"duration": 4,
+			"probability": 0.7
+		}, {
+			"source": 3,
+			"target": 4,
+			"duration": 6,
+			"probability": 1
+		}, {
+			"source": 4,
+			"target": 5,
+			"duration": 2,
+			"probability": 0.6
+		}
+	]
+}

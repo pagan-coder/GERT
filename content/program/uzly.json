@@ -1,0 +1,26 @@
+{
+	"settings": {
+		"type": "GERT",
+		"main_header": "Práce s aplikací",
+		"label_header": "Uzly",
+		"previous": "program/program.json",
+		"next": "program/hrany.json",
+		"description": "Tento tutoriál objasňuje způsob práce s aplikací, tutoriály a grafy.",
+		"label_top": "Uzly v grafu slouží jako „startovní“ bod, ze kterého vycházejí zvolené činnosti projektu. Každý uzel obsahuje své identifikační číslo (zbarveno lehce hnědou barvou), pravděpodobnost realizace (zbarvená červeně), nejdříve možný začátek následujících činností (pod identifikačním číslem) a nejpozději přípustný začátek následujících činností (pod pravděpodobností realizace). Počáteční uzel grafu má samozřejmě obě tyto posledně zmíněné hodnoty nulové, neboť všechny následující činnosti jsou rovněž počáteční a „startují“ v čase <em>0</em>. Pozdní vstávání či ranní přestávka na kávu se při počátku činností neberou v potaz.<br /><br />\n<strong>Nyní zkuste změnit identifikační číslo uzlu</strong> tak, že dvakrát kliknete na příslušný uzel. Poté se vám zobrazí dialog, kam můžete nové číslo zadat, načež klikněte na tlačítko „Uložit“. Můžete rovněž změnit typ uzlu – co to znamená se dozvíte v tutoriálu k metodě GERT.<br /><br /><strong>S uzlem můžete v grafu libovolně pohybovat!</strong> Nachází-li se nějaký uzel mimo oblast, oddálením nebo přiblížením stránky oblast zvětšíte.",
+		"label_left": "<script>$(\"#arrow-previous\").unbind(\"click\"); $(\"#arrow-previous\").click(function () { $(window).scrollTop(0); Saver.saved = true; Controller.loadFile(Saver.JSON.settings.previous); } );</script>Dialog pro úpravu uzlu s políčkem pro změnu identifikačního čísla vypadá následovně:<br /><br />\n\n<img style=\"width: 100%;\" src=\"content/program/uzel1.png\" />",
+		"label_right": "<script>$(\"#arrow-next\").unbind(\"click\"); $(\"#arrow-next\").click(function () { $(window).scrollTop(0); Saver.saved = true; Controller.loadFile(Saver.JSON.settings.next); } );</script>Uzel po úpravě jeho identifikačního čísla z 1 na 333:\n\n<center>\n<img style=\"width: 75%;\" src=\"content/program/uzel2.png\" />\n</center>",
+		"label_bottom": "<center>Kromě tlačítka „Uložit“ dialog obsahuje i tlačítko „Odstranit“, které po potvrzení odstraní z grafu daný uzel (i s případnými veškerými hranami z/do něj vedoucími).</center>"
+	},
+	"nodes": [{
+			"id": 1,
+			"x": 236,
+			"fx": 236,
+			"y": 148,
+			"fy": 148,
+			"vx": 0,
+			"vy": 0,
+			"type": "conjunctive"
+		}
+	],
+	"links": []
+}

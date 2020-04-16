@@ -1,0 +1,15 @@
+{
+	"settings": {
+		"type": "GERT",
+		"main_header": "Práce s aplikací",
+		"label_header": "Úvod",
+		"next": "program/uzly.json",
+		"description": "Tento tutoriál objasňuje způsob práce s aplikací, tutoriály a grafy.",
+		"label_top": "Vítejte v aplikaci, která vás interaktivně naučí pracovat s metodami CPM a GERT, které pak můžete využít pro odhad doby trvání projektů. V tomto tutoriálu se dozvíte, jak můžete s touto aplikací pracovat, jak vytvářet a měnit grafy, popřípadě jak vytvořit vlastní tutoriál, který si následně můžete uložit.<br /><br />\n<strong>Začneme jednoduše!</strong> Všimněte si následující světle modré plochy. Ta slouží pro zobrazení vlastního grafu, ve kterém jsou jednotlivé činnosti projektu představované hranami se zadanými hodnotami daných veličin. Uzly pak slouží k podržení hodnot o tom, kdy mají následující činnosti začít. Vše se dozvíte v následujících tutoriálech k tomu určených, nyní pouze dvakrát poklepejte na onu světle modrou plochu níže.<br /><br />\n\n<span id=\"tut-continue\"><center><strong>Gratulujeme! Právě jste přidali svůj první uzel! Pro pokračování klikněte na zelenou šipku vpravo.</strong></center><br /></span>\n<script>\n    if (Saver.JSON.nodes.length < 1) {\n        $(\"#viewplace\").css(\"background\", \"LightBlue\");\n        $(\"#tut-continue\").hide();\n    };\n$(\"#viewplace\").dblclick(function() { $(this).css(\"background\", \"white\"); $(\"#tut-continue\").show(); });</script>",
+		"label_left": "<script>$(\"#arrow-previous\").unbind(\"click\"); $(\"#arrow-previous\").click(function () { $(window).scrollTop(0); Saver.saved = true; Controller.loadFile(Saver.JSON.settings.previous); } );</script>Šipka vlevo slouží pro návrat na předchozí stránku tutoriálu, pokud je zelená. Naopak jestliže je šedá a sotva viditelná, předchozí stránka tutoriálu neexistuje, a jste tedy na začátku.",
+		"label_right": "<script>$(\"#arrow-next\").unbind(\"click\"); $(\"#arrow-next\").click(function () { $(\"svg\").css(\"background\", \"white\"); $(window).scrollTop(0); Saver.saved = true; Controller.loadFile(Saver.JSON.settings.next); } );</script>Šipka vpravo slouží pro pokračování na následující stránku tutoriálu, pokud je zelená. Naopak jestliže je šedá a sotva viditelná, následující stránka tutoriálu neexistuje, a jste tedy na konci.",
+		"label_bottom": ""
+	},
+	"nodes": [],
+	"links": []
+}

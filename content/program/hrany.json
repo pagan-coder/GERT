@@ -1,0 +1,34 @@
+{
+	"settings": {
+		"type": "GERT",
+		"main_header": "Práce s aplikací",
+		"label_header": "Hrany",
+		"previous": "program/uzly.json",
+		"next": "program/tutorialy.json",
+		"description": "Tento tutoriál objasňuje způsob práce s aplikací, tutoriály a grafy.",
+		"label_top": "Hrany v grafu přímo představují jednotlivé činnosti projektu, které jsou definované dobou trvání a v případě metody GERT i pravděpodobností, jestli se uskuteční/realizují. Každá hrana vede mezi dvěma uzly, z nichž jeden je počáteční a druhý koncový. Činnost začne v závislosti na dobách uvedených u počátečního uzlu, načež určuje, kdy mohou začít následující činnosti, které navazují na její koncový uzel.<br /><br />\n<strong>Pojďme si společně hranu vytvořit!</strong> Jak se to dělá?<br /><br />\n<ol>\n<li>\nNapřed si zvolte uzly, mezi kterými chcete danou hranu vést. Jakmile budete mít vybrán její počáteční uzel, klikněte na něj (jednou). Po kliknutí by se měl kurzor myši změnit na křížek. To značí, že byl vybrán uzel k další akci.\n<br /><br /></li>\n<li>\nKdyž tedy máte takto kurzor myši označený křížkem, zvolte druhý koncový uzel tak, že na něj opět jednou kliknete. V tu chvíli se kurzor myši vrátí zpět do původního stavu, načež se vám okamžitě zobrazí dialog pro vytvoření hrany.\n<br /><br /></li>\n<li>\nTento dialog obsahuje informace o počátečním a koncovém uzlu (identifikační čísla) a o době trvání a v případě metody GERT pravděpodobnosti realizace dané činnosti projektu, kterou hrana představuje. Zkuste upravit dobu trvání na vámi zvolené číslo, například <em>3</em>, <em>10</em>, <em>12</em> apod. Jakmile budete hotovi, klikněte na tlačítko „Uložit“.\n<br /><br /></li>\n<li>\nPo vytvoření nové hrany se přepočítají hodnoty nejdříve možného začátku a nejpozději přípustného začátku u jejího koncového uzlu, a to v závislosti na tom, jakou dobu trvání dané činnosti jste zvolili. Detaily vysvětlují tutoriály k metodám CPM a GERT.\n<br /></li>\n</ol>\n<strong>Naprosto stejný postup můžete zopakovat i pro úpravu hrany!</strong>",
+		"label_left": "<script>$(\"#arrow-previous\").unbind(\"click\"); $(\"#arrow-previous\").click(function () { $(window).scrollTop(0); Saver.saved = true; Controller.loadFile(Saver.JSON.settings.previous); } );</script>Dialog pro přidání hrany s políčkem pro změnu doby trvání dané činnosti vypadá následovně:<br /><br />\n\n<img style=\"width: 100%;\" src=\"content/program/hrana1.png\" />",
+		"label_right": "<script>$(\"#arrow-next\").unbind(\"click\"); $(\"#arrow-next\").click(function () { $(window).scrollTop(0); Saver.saved = true; Controller.loadFile(Saver.JSON.settings.next); } );</script>Graf po přidání hrany:\n\n<center>\n<img style=\"width: 100%;\" src=\"content/program/hrana2.png\" />\n</center>",
+		"label_bottom": "<center>Kromě tlačítka „Uložit“ dialog obsahuje i tlačítko „Odstranit“, které po potvrzení odstraní z grafu danou hranu.</center>"
+	},
+	"nodes": [{
+			"id": 1,
+			"x": 149,
+			"fx": 149,
+			"y": 75,
+			"fy": 75,
+			"vx": 0,
+			"vy": 0,
+			"type": "conjunctive"
+		}, {
+			"id": 2,
+			"x": 392,
+			"fx": 392,
+			"y": 76,
+			"fy": 76,
+			"vx": 0,
+			"vy": 0
+		}
+	],
+	"links": []
+}
